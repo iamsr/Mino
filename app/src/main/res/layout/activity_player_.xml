@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Player_Activity"
+    android:background="#ffffff">
+
+
+
+<RelativeLayout
+    android:id="@+id/playerCardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/functionLayout">
+
+
+      <com.github.florent37.shapeofview.shapes.ArcView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:shape_arc_position="right"
+          app:shape_arc_height="210dp"
+            android:elevation="5dp"
+          app:shape_arc_cropDirection="inside">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:text="Now Playing"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:elevation="5dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_arrow_left"
+                android:layout_marginStart="10dp"
+                android:elevation="5dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="#90212121" />
+
+      </com.github.florent37.shapeofview.shapes.ArcView>
+
+      <de.hdodenhof.circleimageview.CircleImageView
+          android:id="@+id/playerSongImage"
+          android:layout_width="200dp"
+          android:layout_height="200dp"
+          android:elevation="5dp"
+          android:layout_alignParentEnd="true"
+          android:layout_centerVertical="true"
+          android:src="#676262"
+          app:civ_border_width="2dp"
+          app:civ_border_color="#ffffff"
+          android:layout_marginBottom="80dp"
+         />
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/functionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+
+        android:layout_alignParentBottom="true"
+     >
+
+
+        <ImageView
+            android:id="@+id/playerPPButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_pause_circle"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/white_circle_background"
+            android:elevation="5dp"
+            android:layout_marginBottom="15dp"
+            />
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/playerPPButton"
+            app:srcCompat="@drawable/ic_skip_next"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="15dp"
+            android:padding="5dp"
+            android:background="@drawable/white_circle_background_small"
+            android:elevation="5dp"
+       />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/playerPPButton"
+            app:srcCompat="@drawable/ic_skip_previous"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="40dp"
+            android:elevation="5dp"
+            android:background="@drawable/white_circle_background_small"
+            android:layout_marginBottom="15dp"/>
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

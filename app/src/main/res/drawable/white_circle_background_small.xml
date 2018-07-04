@@ -1,0 +1,27 @@
+
+
+<ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#fafafa">
+
+    <item>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:shape="oval">
+
+
+
+    <solid
+        android:color="#fafafa"
+        />
+
+    <size
+        android:width="40dp"
+        android:height="40dp"/>
+
+
+</shape>
+
+    </item>
+
+</ripple>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/listCurrentSongView"
+        android:layout_width="match_parent"
+        android:layout_height="205dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:src="#676262"/>
+
+        <TextView
+            android:id="@+id/listCurrentSongName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I'm Coming Home"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginEnd="50dp"/>
+
+        <TextView
+            android:id="@+id/listCurrentSongSinger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listCurrentSongName"
+            android:layout_alignStart="@+id/listCurrentSongName"
+            android:text="Machine Gun Kelly"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginEnd="50dp"/>
+
+        <TextView
+            android:id="@+id/listCurrentSongYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016"
+            android:layout_below="@+id/listCurrentSongSinger"
+            android:layout_alignStart="@id/listCurrentSongSinger"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffffff"/>
+
+      <ImageView
+          android:id="@+id/listCurrentSongPlayButton"
+          android:layout_width="60dp"
+          android:layout_height="60dp"
+          app:srcCompat="@drawable/ic_play_circle"
+          android:layout_centerHorizontal="true"
+          android:layout_alignParentBottom="true"
+          android:background="@drawable/white_circle_background"
+          android:layout_marginBottom="6dp"
+          android:elevation="2dp"/>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/songListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/listCurrentSongView">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</RelativeLayout>
